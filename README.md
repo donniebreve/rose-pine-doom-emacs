@@ -14,5 +14,5 @@ Rosé Pine for DOOM Emacs. For those who want to soothe the eyes while the finge
 3. Rosé Pine Dawn
 
 # Thanks
-[mvllan, Rosé Pine](https://github.com/rose-pine/rose-pine-theme)
+[mvllan, Rosé Pine](https://github.com/rose-pine/rose-pine-theme)  
 [hlissner, DOOM Emacs](https://github.com/doomemacs/doomemacs)
