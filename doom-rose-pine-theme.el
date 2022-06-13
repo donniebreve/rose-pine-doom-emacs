@@ -47,85 +47,96 @@
   ;; Main theme colors
   (
     ;; name        default   256       16
-    (base0      '("#191724" "#191724" "black"       ))
-    (base1      '("#1f1d2e" "#1f1d2e" "brightblack" ))
-    (base2      '("#26233a" "#26233a" "brightblack" ))
-    (base3      '("#555169" "#555169" "brightblack" ))
-    (base4      '("#6e6a86" "#6e6a86" "brightblack" ))
-    (base5      '("#e0def4" "#e0def4" "brightblack" ))
-    (base6      '("#f0f0f3" "#f0f0f3" "brightblack" ))
-    (base7      '("#c5c3ce" "#c5c3ce" "brightblack" ))
-    (base8      '("#e2e1e7" "#e2e1e7" "white"       ))
-    (base9      '("#eb6f92" "#eb6f92" "red"         ))
-    (baseA      '("#f6c177" "#f6c177" "white"       ))
-    (baseB      '("#ebbcba" "#ebbcba" "white"       ))
-    (baseC      '("#31748f" "#31748f" "white"       ))
-    (baseD      '("#9ccfd8" "#9ccfd8" "white"       ))
-    (baseE      '("#c4a7e7" "#c4a7e7" "white"       ))
-    (baseF      '("#e5e5e5" "#e5e5e5" "grey"        ))
+    (base           '("#191724" "#191724" "black"       ))
+    (surface        '("#1f1d2e" "#1f1d2e" "brightblack" ))
+    (overlay        '("#26233a" "#26233a" "brightblack" ))
+    (muted          '("#6e6a86" "#6e6a86" "brightblack" ))
+    (subtle         '("#908caa" "#908caa" "brightblack" ))
+    (text           '("#e0def4" "#e0def4" "brightblack" ))
+    (love           '("#eb6f92" "#eb6f92" "red"         ))
+    (gold           '("#f6c177" "#f6c177" "white"       ))
+    (rose           '("#ebbcba" "#ebbcba" "white"       ))
+    (pine           '("#31748f" "#31748f" "white"       ))
+    (foam           '("#9ccfd8" "#9ccfd8" "white"       ))
+    (iris           '("#c4a7e7" "#c4a7e7" "white"       ))
+    (highlightL     '("#21202e" "#21202e" "grey"        ))
+    (highlightM     '("#403d52" "#403d52" "grey"        ))
+    (highlightH     '("#524f67" "#524f67" "grey"        ))
 
     ;; Variables required by doom theme
     ;; These are required by doom theme and used in various places
-    (bg              base0)
-    (fg              (if doom-rose-pine-brighter-text base6 base5))
+    (bg             base)
+    (fg             text)
     ;; These are off-color variants of bg/fg, used primarily for `solaire-mode',
     ;; but can also be useful as a basis for subtle highlights (e.g. for hl-line
     ;; or region), especially when paired with the `doom-darken', `doom-lighten',
     ;; and `doom-blend' helper functions.
-    (bg-alt          base1)
-    (fg-alt          base6)
-    (grey            baseF)
-    (red             base9)
-    (orange          baseA)
-    (green           baseC)
-    (teal            baseD)
-    (yellow          baseB)
-    (pink            baseB)
-    (blue            baseC)
-    (dark-blue       baseC)
-    (magenta         baseE)
-    (violet          baseE)
-    (cyan            baseD)
-    (dark-cyan       baseC)
+    (bg-alt         surface)
+    (fg-alt         text)
+    ;; These should represent a spectrum from bg to fg, where base0 is a starker
+    ;; bg and base8 is a starker fg. For example, if bg is light grey and fg is
+    ;; dark grey, base0 should be white and base8 should be black.
+    (base0          base)
+    (base1          surface)
+    (base2          highlightL)
+    (base3          overlay)
+    (base4          highlightM)
+    (base5          highlightH)
+    (base6          muted)
+    (base7          subtle)
+    (base8          text)
+    (grey           muted)
+    (red            love)
+    (orange         gold)
+    (green          pine)
+    (teal           pine)
+    (yellow         rose)
+    (blue           pine)
+    (dark-blue      pine)
+    (magenta        iris)
+    (violet         iris)
+    (cyan           foam)
+    (dark-cyan      foam)
+    ;; Variables required by doom theme ends here
 
     ;; Required face categories for syntax highlighting
-    (highlight       base4)  ; cursor
-    (selection       base0)  ; can't figure out where this is used
-    (region          base2)  ; visual selection
-    (vertical-bar    base1)  ; window split
+    (highlight      subtle)   ; cursor
+    (selection      base)     ; can't figure out where this is used
+    (region         overlay)  ; visual selection
+    (vertical-bar   surface)  ; window split
 
-    (comments        (if doom-rose-pine-brighter-comments base5 base4))
-    (doc-comments    (if doom-rose-pine-brighter-comments base5 base4))
+    (comments       (if doom-rose-pine-brighter-comments subtle muted))
+    (doc-comments   (if doom-rose-pine-brighter-comments subtle muted))
 
-    (builtin         baseC)
-    (constants       baseE)
-    (functions       baseC)
-    (keywords        baseC)
-    (methods         baseD)
-    (numbers         baseB)
-    (operators       baseA)
-    (strings         baseA)
-    (type            baseB)
-    (variables       baseE)
+    (builtin        pine)
+    (constants      iris)
+    (functions      pine)
+    (keywords       pine)
+    (methods        foam)
+    (numbers        rose)
+    (operators      gold)
+    (strings        gold)
+    (type           rose)
+    (variables      iris)
 
-    (error           base9)
-    (success         baseD)
-    (warning         baseA)
+    (error          love)
+    (success        foam)
+    (warning        gold)
 
-    (vc-added        baseD)
-    (vc-deleted      base9)
-    (vc-modified     baseA)
+    (vc-added       foam)
+    (vc-deleted     love)
+    (vc-modified    gold)
 
     ;; Other categories
     ;; Modeline
-    (modeline-bg                 (if doom-rose-pine-brighter-modeline base2 base1))
-    (modeline-fg                 base5)
-    (modeline-bg-alt             (if doom-rose-pine-brighter-modeline base3 base2))
-    (modeline-fg-alt             base5) ; should this be darker or lighter?
-    (modeline-bg-inactive        base0)
-    (modeline-fg-inactive        base4)
-    (modeline-bg-inactive-alt    base0)
-    (modeline-fg-inactive-alt    base4)
+    (modeline-bg                 (if doom-rose-pine-brighter-modeline overlay surface))
+    (modeline-fg                 text)
+    (modeline-bg-alt             (if doom-rose-pine-brighter-modeline muted overlay))
+    (modeline-fg-alt             text) ; should this be darker or lighter?
+    (modeline-bg-inactive        base)
+    (modeline-fg-inactive        subtle)
+    (modeline-bg-inactive-alt    base)
+    (modeline-fg-inactive-alt    subtle)
     (modeline-pad
       (when doom-rose-pine-padded-modeline
         if (integerp doom-rose-pine-padded-modeline) doom-rose-pine-padded-modeline 4)))
@@ -135,7 +146,7 @@
     ;; Font
     ((font-lock-comment-face &override)
       :slant 'italic
-      :background (if doom-rose-pine-dawn-brighter-comments (doom-blend teal base0 0.07)))
+      :background (if doom-rose-pine-dawn-brighter-comments (doom-blend teal base 0.07)))
     ((font-lock-type-face &override) :slant 'italic)
     ((font-lock-builtin-face &override) :slant 'italic)
     ((font-lock-function-name-face &override) :foreground type)
@@ -144,11 +155,11 @@
 
     ;; Highlight line
     (hl-line
-       :background base1)
+       :background surface)
 
     ;; Line numbers
-    ((line-number &override) :foreground base3)
-    ((line-number-current-line &override) :foreground base5)
+    ((line-number &override) :foreground muted)
+    ((line-number-current-line &override) :foreground text)
 
     ;; Mode line
     (mode-line
@@ -160,10 +171,10 @@
       :foreground modeline-fg-inactive
       :box (if modeline-pad `(:line-width ,modeline-pad :color ,modeline-bg-inactive)))
     (mode-line-emphasis
-      :foreground (if doom-rose-pine-dawn-brighter-modeline base5 base4))
+      :foreground (if doom-rose-pine-dawn-brighter-modeline text subtle))
 
     ;; Company
-    (company-tooltip-selection :background blue :foreground base3)
+    (company-tooltip-selection :background blue :foreground muted)
 
     ;; CSS mode <built-in> / scss-mode
     (css-proprietary-property :foreground orange)
@@ -178,11 +189,11 @@
     (doom-modeline-evil-insert-state :foreground orange)   ; The dot color when in insert mode
 
     ;; Helm
-    (helm-selection :foreground base0 :weight 'bold :background blue)
+    (helm-selection :foreground base :weight 'bold :background blue)
 
     ;; Ivy
-    (ivy-current-match :background base2 :distant-foreground fg)
-    (ivy-minibuffer-match-face-1 :foreground base4 :background nil :weight 'bold)
+    (ivy-current-match :background overlay :distant-foreground fg)
+    (ivy-minibuffer-match-face-1 :foreground subtle :background nil :weight 'bold)
     (ivy-minibuffer-match-face-2 :foreground orange :background nil :weight 'bold)
     (ivy-minibuffer-match-face-3 :foreground magenta :background nil :weight 'bold)
     (ivy-minibuffer-match-face-4 :foreground pink :background nil :weight 'bold)
@@ -190,9 +201,9 @@
     (ivy-posframe :background modeline-bg-alt)
 
     ;; Markdown mode
-    (markdown-markup-face :foreground base5)
+    (markdown-markup-face :foreground text)
     (markdown-header-face :inherit 'bold :foreground red)
-    ((markdown-code-face &override) :background base1)
+    ((markdown-code-face &override) :background surface)
 
     ;; org <built-in>
     (org-block :background (doom-blend yellow bg 0.04) :extend t)
@@ -211,8 +222,8 @@
       :box (if modeline-pad `(:line-width ,modeline-pad :color ,modeline-bg-inactive-alt)))
 
     ;; Widget
-    (widget-field :foreground fg :background base3)
-    (widget-single-line-field :foreground fg :background base3)
+    (widget-field :foreground fg :background muted)
+    (widget-single-line-field :foreground fg :background muted)
 
     ;; Swiper
     (swiper-match-face-1 :inherit 'ivy-minibuffer-match-face-1)
