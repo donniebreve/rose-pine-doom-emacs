@@ -204,6 +204,14 @@
     (org-block-background :background (doom-blend yellow bg 0.04))
     (org-block-begin-line :background (doom-blend yellow bg 0.08) :extend t)
     (org-block-end-line :background (doom-blend yellow bg 0.08) :extend t)
+    (org-level-1 :foreground gold)
+    (org-level-2 :foreground rose)
+    (org-level-3 :foreground pine)
+    (org-level-4 :foreground iris)
+    (org-level-5 :foreground gold)
+    (org-level-6 :foreground rose)
+    (org-level-7 :foreground pine)
+    (org-level-8 :foreground iris)
 
     ;; Solaire mode line
     (solaire-mode-line-face
