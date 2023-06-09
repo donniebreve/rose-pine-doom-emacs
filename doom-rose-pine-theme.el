@@ -193,10 +193,10 @@
 
     ;; Ivy
     (ivy-current-match :background overlay :distant-foreground fg)
-    (ivy-minibuffer-match-face-1 :foreground subtle :background nil :weight 'bold)
-    (ivy-minibuffer-match-face-2 :foreground orange :background nil :weight 'bold)
-    (ivy-minibuffer-match-face-3 :foreground magenta :background nil :weight 'bold)
-    (ivy-minibuffer-match-face-4 :foreground pink :background nil :weight 'bold)
+    (ivy-minibuffer-match-face-1 :foreground pine :background nil :weight 'bold)
+    (ivy-minibuffer-match-face-2 :foreground iris :background nil :weight 'bold)
+    (ivy-minibuffer-match-face-3 :foreground gold :background nil :weight 'bold)
+    (ivy-minibuffer-match-face-4 :foreground rose :background nil :weight 'bold)
     (ivy-minibuffer-match-highlight :foreground magenta :weight 'bold)
     (ivy-posframe :background modeline-bg-alt)
 
