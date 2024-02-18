@@ -1,5 +1,5 @@
-# rose-pine-doom-emacs
-Rosé Pine for DOOM Emacs. For those who want to soothe the eyes while the fingers burn.
+# Rosé Pine for DOOM Emacs
+All natural pine, faux fur and a bit of soho vibes for the classy minimalist.
 
 # How to install
 1. Clone or download this repo
