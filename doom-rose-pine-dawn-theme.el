@@ -202,8 +202,8 @@
     ;; org <built-in>
     (org-block :background (doom-blend yellow bg 0.04) :extend t)
     (org-block-background :background (doom-blend yellow bg 0.04))
-    (org-block-begin-line :background (doom-blend yellow bg 0.08) :extend t)
-    (org-block-end-line :background (doom-blend yellow bg 0.08) :extend t)
+    (org-block-begin-line :background (doom-blend yellow bg 0.08) :foreground comments :extend t)
+    (org-block-end-line :background (doom-blend yellow bg 0.08) :foreground comments :extend t)
     (org-level-1 :foreground gold)
     (org-level-2 :foreground rose)
     (org-level-3 :foreground pine)
